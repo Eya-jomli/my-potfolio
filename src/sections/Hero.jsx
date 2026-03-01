@@ -69,11 +69,12 @@ export const Hero = () => {
                 {/*Headline */}
                 <div className="space-y-4">
                     <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
-                        Crafting <span className="text-[var(--color-primary)] glow-text">digital</span>
+                        Building<span className="text-[var(--color-primary)] glow-text">modern</span>
                         <br />
-                        experience with
+                        digital products
+
                         <br />
-                        <span className="font-serif italic font-normal text-white"> precision.</span>
+                        <span className="font-serif italic font-normal text-white"> with purpose.</span>
                     </h1>
                     <p className="text-lg text-[var(--color-muted-foreground)] max-w-lg animate-fade-in animation-delay-200">
                         Hi, I'm Eya Jomli - Enthusiastic Software Engineer, dedicated to transforming ideas into elegant code.
@@ -84,10 +85,12 @@ export const Hero = () => {
                     <Button size="lg">
                         Contact Me <ArrowRight className="w-5 h-5" />
                     </Button>
-                   <AnimatedBorderButton>
-                     <Download className="w-5 h-5" />
-                       Download CV 
-                   </AnimatedBorderButton>
+                    <a href="/projects/cv/Eya-Jomli.pdf" download>
+                      <AnimatedBorderButton>
+                        <Download className="w-5 h-5" />
+                        Download CV
+                      </AnimatedBorderButton>
+                    </a>
                 </div>
 
                 {/*Social Links */}

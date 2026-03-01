@@ -5,7 +5,7 @@ import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 const projects = [
     {
         title: "Plant-disease-AI",
-        description: "This project offers an AI-driven solution to help farmers detect plant diseases and manage their crops more efficiently. With cutting-edge machine learning models and an intuitive user interface, it ensures that farmers can quickly identify and respond to threats, minimizing losses and maximizing productivity. Additionally, it features a chatbot assistant designed to provide insights and guidance in the domains of farming and gardening.",
+        description: "This project offers an AI-driven solution to help farmers detect plant diseases and manage their crops more efficiently. With cutting-edge machine learning models and an intuitive user interface, it ensures that farmers can quickly identify and respond to threats, minimizing losses and maximizing productivity.",
         image: "/public/projects/projects/ai-plant.png",
         link :"https://github.com/Eya-jomli/Plant-disease-AI",
         tags: ["React", "Django", "Ai"],
@@ -17,12 +17,12 @@ const projects = [
         link :"https://github.com/Eya-jomli/cms-word-phrase-manager",
         tags: ["React", "Django", "Ai"],
     },
-    {
-        title: "Plant-disease-AI",
-        description: "",
-        image: "/public/projects/projects/ai-plant.png",
-        link :"https://github.com/Eya-jomli/Plant-disease-AI",
-        tags: ["React", "Django", "Ai"],
+   {
+    title: "MultiStep Registration Form",
+    description: "A 7-step multi-step registration form built with Laravel, featuring input validation at each step and database integration with MySQL. Fully responsive design.",
+    image: "/public/projects/projects/form.png",
+    link: "https://github.com/Eya-jomli/MultiStep-Form",
+    tags: ["PHP", "Laravel", "MySQL", "Multi-step Form", "Livewire"]
     },
 
 ];
@@ -42,12 +42,12 @@ export const Projects = () => {
                     <span className="font-serif italic font-normal text-white"> make impact.</span>
                 </h2>
                 <p className="text-[var(--color-muted-foreground)] animate-fade-in animation-delay-200">
-                    A Selection of my recent work, from complex web applications to innovative tools that solve real-world problems.
+                    From full-stack web platforms to AI-powered applications, these projects reflect my approach to clean architecture and thoughtful design.
                 </p>
             </div>
 
             {/*Projects Grid */}
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-3 gap-8">
                 {projects.map((project,index) => (
                     <div key={index} className="group glass rounded-2xl overflow-hidden animate-fade-in md:row-span-1"
                     style={{animationDelay: `${(index + 1 ) * 100}ms`}}
