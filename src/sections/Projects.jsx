@@ -6,21 +6,21 @@ const projects = [
     {
         title: "Plant-disease-AI",
         description: "This project offers an AI-driven solution to help farmers detect plant diseases and manage their crops more efficiently. With cutting-edge machine learning models and an intuitive user interface, it ensures that farmers can quickly identify and respond to threats, minimizing losses and maximizing productivity.",
-        image: "/public/projects/projects/ai-plant.png",
+        image: "/projects/ai-plant.png",
         link :"https://github.com/Eya-jomli/Plant-disease-AI",
         tags: ["React", "Django", "Ai"],
     },
      {
         title: "CMS Word Phrase Manager",
         description: "A simple Content Management System (CMS) for managing words and phrases in a local SQLite database. This project allows administrators to view, edit, and update content easily, with features like pagination, search, and initial data loading from a JSON file.",
-        image: "/public/projects/projects/cms.png",
+        image: "/projects/cms.png",
         link :"https://github.com/Eya-jomli/cms-word-phrase-manager",
         tags: ["React", "Django", "Ai"],
     },
    {
     title: "MultiStep Registration Form",
     description: "A 7-step multi-step registration form built with Laravel, featuring input validation at each step and database integration with MySQL. Fully responsive design.",
-    image: "/public/projects/projects/form.png",
+    image: "/projects/form.png",
     link: "https://github.com/Eya-jomli/MultiStep-Form",
     tags: ["PHP", "Laravel", "MySQL", "Multi-step Form", "Livewire"]
     },
