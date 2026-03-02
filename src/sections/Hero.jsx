@@ -32,7 +32,7 @@ export const Hero = () => {
       {/* Background */}
       <div className="absolute inset-0">
         <img
-          src="../../public/projects/hero.jpeg"
+          src="/projects/hero.jpeg"
           alt="Hero image"
           className="w-full h-full object-cover opacity-40"
         />
@@ -122,7 +122,7 @@ export const Hero = () => {
               {/* Glass + glow wrapper */}
               <div className="relative glass rounded-3xl p-2 glow-border">
                 <img
-                  src="../../public/projects/Eya.png"
+                  src="/projects/Eya.png"
                   alt="Eya Jomli"
                   className="w-full aspect-[4/5] object-cover rounded-2xl"
                 />
