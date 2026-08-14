@@ -1,17 +1,21 @@
 import { Button } from "@/components/Button";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
-const navLinks = [
-  { href: "#about", label: "About" },
-  { href: "#projects", label: "Projects" },
-  { href: "#experience", label: "Experience" },
-  { href: "#testimonials", label: "Testimonials" },
-  { href: "#contact", label: "Contact" },
-];
+import { useLanguage } from "@/context/LanguageContext";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+
 
 export const Navbar = () => {
+ const { t } = useLanguage();
 const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 const [isScrolled, setIsScrolled] = useState(false);
+const navLinks = [
+  { href: "#about", label: t.nav.about },
+  { href: "#projects", label: t.nav.projects },
+  { href: "#experience", label: t.nav.experience },
+  { href: "#testimonials", label: t.nav.testimonials },
+  { href: "#contact", label: t.nav.contact },
+];
 useEffect(() => {
   const handleScroll = () => {
     setIsScrolled(window.scrollY > 50);
@@ -28,7 +32,7 @@ useEffect(() => {
           href="#"
           className="text-xl font-bold tracking-tight hover:text-[var(--color-primary)] transition-colors"
         >
-          PM <span className="text-[var(--color-primary)]">.</span>
+          EJ <span className="text-[var(--color-primary)]">.</span>
         </a>
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-1">
@@ -45,8 +49,9 @@ useEffect(() => {
             </div>
         </div>
          {/*CTA button */}
-         <div className="hidden md:block">
+         <div className="hidden md:flex items-center gap-2">
          <Button size="sm">Contact Me</Button>
+          <LanguageSwitcher />
          </div>
 
          {/*Mobile Mennu Button*/}
@@ -58,23 +63,31 @@ useEffect(() => {
 
       {/* Mobile Menu */ }
       {isMobileMenuOpen && (
-      <div className="md:hidden glass-strong animate-fade-in">
-        <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
-            {navLinks.map((link, index) => (
-                <a
-                href={link.href}
-                key={index}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="text-lg text-[var(--color-muted-foreground)] hover:text-[var(--color-foreground)] py-2"
-                >
-                {link.label}
-                </a>
-            ))}
+    <div className="md:hidden glass-strong animate-fade-in">
+      <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
 
-            <Button onClick={() => setIsMobileMenuOpen(false)}>Contact Me</Button>
-        </div>
+      {navLinks.map((link, index) => (
+        <a
+          href={link.href}
+          key={index}
+          onClick={() => setIsMobileMenuOpen(false)}
+          className="text-lg text-[var(--color-muted-foreground)] hover:text-[var(--color-foreground)] py-2"
+        >
+          {link.label}
+        </a>
+      ))}
+
+      <Button onClick={() => setIsMobileMenuOpen(false)}>
+        {t.nav.contact}
+      </Button>
+
+      <div className="flex justify-center">
+        <LanguageSwitcher />
       </div>
-      )}
+
+    </div>
+  </div>
+  )}
     </header>
   );
 };
